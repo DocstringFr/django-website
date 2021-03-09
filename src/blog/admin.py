@@ -1,7 +1,6 @@
 from django.contrib import admin
 
 # Register your models here.
-
 from blog.models import BlogPost
 
 
@@ -15,4 +14,3 @@ class BlogPostAdmin(admin.ModelAdmin):
         "date",
     )
     list_editable = ("published",)
-    autocomplete_fields = ("author", )

@@ -33,6 +33,9 @@ class BlogPost(models.Model):
     def __str__(self):
         return self.title
 
+    def number_of_words(self):
+        return len(self.content.split())
+
     def get_absolute_url(self):
         return reverse("blog-post", kwargs={"slug": self.slug})
 

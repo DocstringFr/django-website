@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+
+
+
+{% block content %}
+
+    {% for post in posts %}
+        <a href="{% url 'blog-post' slug=post.slug %}">
+            <h1>{{ post.title }}</h1>
+        </a>
+    {% endfor %}
+
+{% endblock %}
