@@ -4,6 +4,8 @@
 
 {% block content %}
 
+    <a href="{% url 'blog-index' %}">Retour au sommaire</a>
+
     {{ post.content|safe }}
 
 {% endblock %}

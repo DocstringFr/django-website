@@ -1,6 +1,6 @@
 {% extends 'blog/base.html' %}
 
-
+{% block title %}<title>Le blog</title>{% endblock %}
 
 {% block content %}
 
@@ -8,6 +8,7 @@
         <a href="{% url 'blog-post' slug=post.slug %}">
             <h1>{{ post.title }}</h1>
         </a>
+        <p>{{ post.content|truncatewords:100|striptags|safe }}</p>
     {% endfor %}
 
 {% endblock %}
