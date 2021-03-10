@@ -2,16 +2,16 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Créer un article</title>
+    <title>Créer un compte</title>
 </head>
 <body>
 
-    <h1>Créer un article</h1>
+    <h1>Créer un compte</h1>
 
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="Créer">
+        <input type="submit" value="S'inscrire">
     </form>
 
 </body>
