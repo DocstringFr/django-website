@@ -4,8 +4,22 @@
 
 {% block content %}
 
-    <a href="{% url 'blog-index' %}">Retour au sommaire</a>
+<a href="{% url 'blog-index' %}">Retour au sommaire</a>
 
+<p>
+    <a href="{% url 'blog-post-edit' slug=post.slug %}">
+        Modifier l'article
+    </a>
+</p>
+<p>
+    <a href="{% url 'blog-post-delete' slug=post.slug %}">
+        Supprimer l'article
+    </a>
+</p>
+
+<h1>{{ post.title }}</h1>
+<p>
     {{ post.content|safe }}
+</p>
 
 {% endblock %}

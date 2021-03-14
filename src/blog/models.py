@@ -30,6 +30,11 @@ class BlogPost(models.Model):
     class Meta:
         verbose_name = "Article"
 
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
+
     def __str__(self):
         return self.title
 
